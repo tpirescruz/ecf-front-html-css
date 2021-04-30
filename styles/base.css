@@ -145,3 +145,8 @@ a[href^="tel"] {
     content: '('attr(href)')';
   }
 }
+
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
