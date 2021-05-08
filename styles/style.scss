@@ -43,8 +43,18 @@ body {
         background-color: $primary-color-cyan;
         color: $secondary-color-very-light-grey;
     }
-   
+    &::before {
+        content: url(/ressources/Home/Group-3.svg);
+        position: relative;
+        left: -3rem;
+        top: 0;
+        background-color:rgba(0, 0, 0, 0.144);
+        display: inline-block;
+        height: inherit;
+        width: 5rem;
+    }
 }
+
 .btn-secondary {
     background-color: rgba(255, 255, 255, 0);
     padding: 1.5rem 3rem;
@@ -56,7 +66,6 @@ body {
         border: 1px solid $primary-color-dark-grey;
         background-color: $primary-color-dark-grey;
         color: $secondary-color-very-light-grey;
-
     }
 
 }
@@ -65,8 +74,8 @@ h2 {
     font-size: 4rem;
     color: $primary-color-dark-grey
 }
-p {
-    
+h3 {
+    @extend %novaBold
 }
 nav {
     @extend %publicsansRegular;
@@ -135,6 +144,8 @@ header {
 .portfolio-text {
     width: 50%;
 }
+
+
 footer {
     background-color: $primary-color-dark-grey;
     display: flex;
@@ -149,10 +160,11 @@ footer {
         padding: 2rem 10rem;
         color: $secondary-color-very-light-grey;
     }
-    .logo {
-        display: flex;
-        img {
-            margin-left: 2rem;
-        }
+}
+
+.logo {
+    display: flex;
+    img {
+        margin-left: 2rem;
     }
 }
