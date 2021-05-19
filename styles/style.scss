@@ -1,170 +1,189 @@
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&family=Karla:wght@700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&family=Karla:wght@700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
 %novaBold {
-    font-family: 'Ibarra Real Nova', serif;
-    font-weight: 700;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
 }
-%publicsansBoldItalic{
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 700;
-    font-style: italic;
+%publicsansBoldItalic {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
-%publicsansRegular{
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 400;
+%publicsansRegular {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
 }
-%publicsansBold{
-    font-family: 'Public Sans', sans-serif;
-    font-weight: 700;
- }
+%publicsansBold {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+}
 %karlaBold {
-    font-family: 'Karla', sans-serif;
-    font-weight: 700;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
 }
 
-$primary-color-cyan: #5FB4A2;
-$primary-color-dark-blue: #203A4C;
-$primary-color-dark-grey: #33323D;
-$secondary-color-very-light-grey: #FAFAFA;
-$secondary-color-light-grey: #EAEAEB;
-$secondary-color-red: #F43030;
+$primary-color-cyan: #5fb4a2;
+$primary-color-dark-blue: #203a4c;
+$primary-color-dark-grey: #33323d;
+$secondary-color-very-light-grey: #fafafa;
+$secondary-color-light-grey: #eaeaeb;
+$secondary-color-red: #f43030;
 body {
-    background-color: $secondary-color-very-light-grey;
+  background-color: $secondary-color-very-light-grey;
 }
 .btn-primary {
-    background-color: $primary-color-dark-blue;
+  background-color: $primary-color-dark-blue;
+  color: $secondary-color-very-light-grey;
+  padding: 0rem 3rem;
+  width: max-content;
+  @extend %publicsansRegular;
+  font-size: 1.3rem;
+  border: 1px solid $primary-color-dark-blue;
+  &:hover  {
+    background-color: $primary-color-cyan;
     color: $secondary-color-very-light-grey;
-    padding: 0rem 3rem;
-    width: max-content;
-    @extend %publicsansRegular;
-    font-size: 1.3rem;
-    border: 1px solid $primary-color-dark-blue;
-    &:hover {
-        background-color: $primary-color-cyan;
-        color: $secondary-color-very-light-grey;
-    }
-    &::before {
-        content: url(/ressources/Home/Group-3.svg);
-        position: relative;
-        left: -3rem;
-        top: 0;
-        background-color:rgba(0, 0, 0, 0.144);
-        display: inline-block;
-        height: inherit;
-        width: 5rem;
-    }
+  }
+  &::before {
+    content: url(/ressources/Home/Group-3.svg);
+    position: relative;
+    left: -3rem;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.144);
+    display: inline-block;
+    height: inherit;
+    width: 5rem;
+  }
 }
 
 .btn-secondary {
-    background-color: rgba(255, 255, 255, 0);
-    padding: 1.5rem 3rem;
-    width: max-content;
-    height: max-content;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 1.5rem 3rem;
+  width: max-content;
+  height: max-content;
+  border: 1px solid $primary-color-dark-grey;
+  @extend %publicsansRegular;
+  &:hover {
     border: 1px solid $primary-color-dark-grey;
-    @extend %publicsansRegular;
-    &:hover{
-        border: 1px solid $primary-color-dark-grey;
-        background-color: $primary-color-dark-grey;
-        color: $secondary-color-very-light-grey;
-    }
-
+    background-color: $primary-color-dark-grey;
+    color: $secondary-color-very-light-grey;
+  }
 }
 h2 {
-    @extend %novaBold;
-    font-size: 4rem;
-    color: $primary-color-dark-grey
+  @extend %novaBold;
+  font-size: 4rem;
+  color: $primary-color-dark-grey;
 }
 h3 {
-    @extend %novaBold
+  @extend %novaBold;
 }
 nav {
-    @extend %publicsansRegular;
-    display: flex;
-    justify-content: space-between;   
-    padding: 5rem 10rem;
+  @extend %publicsansRegular;
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 10rem;
 }
 .nav-menu {
-    display: flex;
+  display: flex;
 }
 .nav-item {
-    margin: 0 3rem;
-    font-size: 1.5rem;
-    &:hover{
-        color: $primary-color-cyan;
-    }
+  margin: 0 3rem;
+  font-size: 1.5rem;
+  &:hover {
+    color: $primary-color-cyan;
+  }
 }
 header {
-    background-image: url(../ressources/Home/Bitmap.png);
-    background-repeat: no-repeat;
-    width: 80%;
-    margin: 0 auto;
-    height: 100vh;
+  background-repeat: no-repeat;
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+}
+.homepage-header {
+  background-image: url(../ressources/Home/Bitmap.png);
 }
 .header-intro {
-    background-color: $secondary-color-very-light-grey;
-    width: 35%;
-    padding: 5rem 5rem 0 0;
-    font-size: 2rem;
-    line-height: 5rem;
-    margin: auto auto 0 0 ;
-    @extend %novaBold
+  background-color: $secondary-color-very-light-grey;
+  width: 35%;
+  padding: 5rem 5rem 0 0;
+  font-size: 2rem;
+  line-height: 5rem;
+  margin: auto auto 0 0;
+  position: relative;
+  bottom: -45%;
+  @extend %novaBold;
 }
 .main-index {
-    margin: 0 10rem ;
+  margin: 0 10rem;
 }
 .about-me {
-    display: flex;
-    padding: 5rem 0;
-   
+  display: flex;
+  padding: 5rem 0;
 }
 .side-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10rem;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem;
+  width: 50%;
 }
 .main-contact {
-    display: flex;
-    justify-content: space-between;
-    padding: 5rem 0;
-    align-items: center;
-    h2 {
-        width: 40%;
-    }
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+  align-items: center;
+  h2 {
+    width: 40%;
+  }
+}
+.portfolios-contact-banner {
+  margin: 0 10rem;
 }
 
 .portfolio-item:nth-child(even) {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .portfolio-item {
-    display: flex;
-    margin: 5rem 0;
+  display: flex;
+  margin: 5rem 0;
 }
 .portfolio-text {
-    width: 50%;
+  width: 50%;
+}
+.contact-cont  {
+  display: flex;
+  flex-direction: row;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: blue;
+
+  width: 20%;
 }
 
-
+.get-in-touch {
+  width: 20%;
+}
 footer {
-    background-color: $primary-color-dark-grey;
+  background-color: $primary-color-dark-grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  margin-top: 5rem;
+  div {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 10rem;
-    div {
-        display: flex;
-        align-items: center;
-    }
-    nav {
-        padding: 2rem 10rem;
-        color: $secondary-color-very-light-grey;
-    }
+  }
+  nav {
+    padding: 2rem 10rem;
+    color: $secondary-color-very-light-grey;
+  }
 }
 
 .logo {
-    display: flex;
-    img {
-        margin-left: 2rem;
-    }
+  display: flex;
+  img {
+    margin-left: 2rem;
+  }
 }
