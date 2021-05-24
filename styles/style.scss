@@ -104,6 +104,9 @@ p {
   justify-content: space-between;
   padding: 5rem 10rem;
 }
+.hamburger {
+  visibility: hidden;
+}
 .nav-menu {
   display: flex;
 }
@@ -286,9 +289,6 @@ p {
   div {
     width: 60%;
   }
-  .logo {
-    margin: 0 5rem;
-  }
 }
 form {
   width: 60%;
@@ -296,11 +296,13 @@ form {
   input {
     height: 5rem;
     border: none;
+    margin: 1rem 0;
     background-color: $secondary-color-light-grey;
   }
   textarea {
     background-color: $secondary-color-light-grey;
     border: none;
+    margin: 1rem 0;
   }
   button {
     @extend %publicsansRegular;
@@ -350,7 +352,7 @@ footer {
 .logo {
   display: flex;
   img {
-    margin-left: 2rem;
+    margin: 0 2rem;
   }
 }
 
@@ -358,6 +360,7 @@ footer {
 @media screen and (min-width: 0px) and (max-width: 380px) {
   .top-nav {
     padding: 2rem 5%;
+    
   }
 
   h1 {
@@ -365,6 +368,15 @@ footer {
   }
   .nav-menu {
     display: none;
+    background-color: $primary-color-dark-grey;
+    color: $secondary-color-very-light-grey;
+  }
+  .hamburger {visibility: visible;}
+  .hamburger-line {
+    width: 3rem;
+    margin: .8rem 0;
+    background-color: $primary-color-dark-grey;
+    height: 2px;
   }
   .homepage-header {
     padding: 0;
@@ -465,6 +477,9 @@ footer {
   }
   .get-in-touch {
     flex-direction: column;
+    div {
+      width: 90%;
+    }
   }
   .form-container {
     flex-direction: column;
