@@ -367,9 +367,21 @@ footer {
     font-size: 4rem;
   }
   .nav-menu {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    top: 7rem;
+    right: 2rem;
+    padding: 15rem;
+    flex-direction: column;
     background-color: $primary-color-dark-grey;
     color: $secondary-color-very-light-grey;
+  }
+  .nav-menu-toggle {
+    visibility: visible;
+  }
+  .nav-item {
+    padding: 2rem 4rem;
+    text-align: center;
   }
   .hamburger {visibility: visible;}
   .hamburger-line {
