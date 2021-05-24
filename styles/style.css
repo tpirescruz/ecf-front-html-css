@@ -5,7 +5,7 @@ h2, .header-intro {
   font-weight: 700;
 }
 
-.btn-primary, .btn-secondary, p, .top-nav, .nav p, form button {
+.btn-primary, .btn-secondary, p, .top-nav, .nav p, form button, footer {
   font-family: "Public Sans", sans-serif;
   font-weight: 400;
 }
@@ -69,6 +69,11 @@ body {
   color: #fafafa;
 }
 
+h1 {
+  color: #33323d;
+  font-size: 4rem;
+}
+
 h2 {
   font-size: 4rem;
   color: #33323d;
@@ -83,6 +88,7 @@ h3 {
 
 p {
   font-size: 1.5rem;
+  line-height: 3rem;
   color: #33323d;
 }
 
@@ -115,6 +121,7 @@ p {
   background-image: url(../ressources/Home/Bitmap.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 80%;
   margin: 0 auto;
   height: 75vh;
@@ -171,10 +178,6 @@ p {
   border-top: 1px solid;
   border-bottom: 1px solid;
   color: #eaeaeb;
-}
-
-.side-text p {
-  margin: 2rem 0;
 }
 
 .main-contact {
@@ -453,5 +456,167 @@ footer nav {
 
 .logo img {
   margin-left: 2rem;
+}
+
+@media screen and (min-width: 0px) and (max-width: 380px) {
+  .top-nav {
+    padding: 2rem 5%;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .homepage-header {
+    padding: 0;
+    margin: auto;
+    height: 30rem;
+    background-position: bottom;
+  }
+  .header-intro {
+    top: 100%;
+    margin: auto;
+    padding: 0;
+    height: 30rem;
+    width: 100%;
+  }
+  .main-index {
+    margin: 5%;
+  }
+  .about-me {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
+    padding: 5rem 0;
+    margin: auto;
+    margin-top: 30rem;
+  }
+  .about-me img {
+    height: 30rem;
+    margin: 5rem auto;
+    width: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .side-text {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .side-text p {
+    margin: 2rem 0;
+  }
+  .main-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-contact h2 {
+    width: 100%;
+    text-align: center;
+    margin: 5rem 0;
+  }
+  .portfolio-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+  }
+  .portfolio-item:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer {
+    margin: 0;
+    padding: 5rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 770px) {
+  h1 {
+    font-size: 3.9rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  .homepage-header {
+    width: 90%;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-image: url(/ressources/Home/Bitmap-tablet.png);
+  }
+  .header-intro {
+    width: 70%;
+    height: 50%;
+    top: 50%;
+  }
+  .main-index {
+    margin: 5%;
+  }
+  .about-me img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: right;
+       object-position: right;
+  }
+  .side-text {
+    width: 70%;
+    padding: 5%;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
