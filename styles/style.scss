@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&family=Karla:wght@700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Karla:wght@400;700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
+%novaRegular {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 400;
+}
 %novaBold {
   font-family: "Ibarra Real Nova", serif;
   font-weight: 700;
@@ -35,23 +39,24 @@ body {
   background-color: $primary-color-dark-blue;
   color: $secondary-color-very-light-grey;
   padding: 0rem 3rem;
-  width: max-content;
+  width: fit-content;
+  height: fit-content;
   @extend %publicsansRegular;
   font-size: 1.3rem;
-  border: 1px solid $primary-color-dark-blue;
-  &:hover  {
-    background-color: $primary-color-cyan;
-    color: $secondary-color-very-light-grey;
-  }
+  border: none;
+  justify-content: center;
   &::before {
     content: url(/ressources/Home/Group-3.svg);
     position: relative;
     left: -3rem;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.144);
+    background-color: #00000049;
     display: inline-block;
-    height: inherit;
     width: 5rem;
+    height: 5rem;
+  }
+  &:hover {
+    background-color: $primary-color-cyan;
+    color: $secondary-color-very-light-grey;
   }
 }
 
@@ -74,9 +79,18 @@ h2 {
   color: $primary-color-dark-grey;
 }
 h3 {
-  @extend %novaBold;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 400;
+  color: $primary-color-dark-grey;
+  font-size: 3rem;
 }
-nav {
+
+p {
+  @extend %publicsansRegular;
+  font-size: 1.5rem;
+  color: $primary-color-dark-grey;
+}
+.top-nav {
   @extend %publicsansRegular;
   display: flex;
   justify-content: space-between;
@@ -92,39 +106,53 @@ nav {
     color: $primary-color-cyan;
   }
 }
-header {
+
+.homepage-header {
+  background-image: url(../ressources/Home/Bitmap.png);
+  background-size: cover;
   background-repeat: no-repeat;
   width: 80%;
   margin: 0 auto;
-  height: 100vh;
+  height: 75vh;
 }
-.homepage-header {
-  background-image: url(../ressources/Home/Bitmap.png);
-}
+
 .header-intro {
   background-color: $secondary-color-very-light-grey;
-  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 40%;
+  height: 60%;
   padding: 5rem 5rem 0 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 5rem;
   margin: auto auto 0 0;
   position: relative;
-  bottom: -45%;
+  top: 40%;
   @extend %novaBold;
+  h1 {
+    margin: 2rem 0;
+  }
 }
 .main-index {
   margin: 0 10rem;
 }
 .about-me {
   display: flex;
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 .side-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 10rem;
-  width: 50%;
+  margin: 0 15rem;
+  padding: 0 5rem;
+  width: 40%;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  color: $secondary-color-light-grey;
+  p {
+    margin: 2rem 0;
+  }
 }
 .main-contact {
   display: flex;
@@ -144,26 +172,148 @@ header {
 }
 .portfolio-item {
   display: flex;
-  margin: 5rem 0;
+  margin-bottom: 10rem;
 }
 .portfolio-text {
   width: 50%;
 }
-.contact-cont  {
-  display: flex;
-  flex-direction: row;
+.portfolio-page-banner {
+  width: fit-content;
+  margin: auto;
 }
-.form {
+.portfolio-page-left {
+  border-top: $secondary-color-light-grey 1px solid;
+  border-bottom: $secondary-color-light-grey 1px solid;
+  width: 30%;
+  height: fit-content;
+  margin: 0 10rem;
+  padding: 5rem 0;
+  p {
+    margin: 2rem 0;
+  }
+}
+.portfolio-page-right {
+  width: 60%;
+  h3 {
+    margin: 2rem 0;
+  }
+  figure {
+    margin: 5rem 0;
+  }
+}
+.green-text {
+  color: $primary-color-cyan;
+}
+.portfolio-page-main:first-child {
+  border: 1px solid red;
+}
+.portfolio-page-main {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10rem auto;
+}
+.portfolio-nav {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.nav {
+  background-color: transparent;
+  width: 50%;
+  padding: 2rem 0;
+  border: 1px $primary-color-dark-grey solid;
+  p {
+    @extend %publicsansRegular;
+    color: $primary-color-dark-grey;
+    filter: opacity(50%);
+  }
+}
+.nav-left {
+  text-align: left;
+  border-left: none;
+  display: flex;
+  align-items: center;
+  svg  {
+    margin-right: 2rem;
+  }
+}
+.nav-left::before {
+  content: url(/ressources/Home/nav-arrow.svg);
+  display: block;
+  position: relative;
+  transform: scale(1.2);
+  margin-right: 2rem;
+}
+.nav-right::after {
+  content: url(/ressources/Home/nav-arrow.svg);
+  display: block;
+  position: relative;
+  transform: rotate(180deg) scale(1.4);
+  margin-left: 2rem;
+}
+.nav-right {
+  text-align: right;
+  border-right: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.contact-cont {
+  display: flex;
+  margin: 0 15rem;
+  flex-direction: column;
+}
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+  border-top: $secondary-color-light-grey 1px solid;
+}
+.get-in-touch {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+  border-top: $secondary-color-light-grey 1px solid;
+  div {
+    width: 60%;
+  }
+  .logo {
+    img {
+      margin: 2rem 5rem 0 0;
+    }
+  }
+}
+form {
+  width: 60%;
+  @extend %publicsansBold;
+  input {
+    height: 5rem;
+    border: none;
+    background-color: $secondary-color-light-grey;
+  }
+  textarea {
+    background-color: $secondary-color-light-grey;
+    border: none;
+  }
+  button {
+    @extend %publicsansRegular;
+    background-color: $primary-color-dark-blue;
+    color: $secondary-color-very-light-grey;
+    border: none;
+    font-size: 1.3rem;
+    padding: 1.5rem 5rem;
+    &:hover {
+      background-color: $primary-color-cyan;
+    }
+  }
+}
+.input-container {
   display: flex;
   flex-direction: column;
-  background-color: blue;
-
-  width: 20%;
+  margin: 2em 0;
 }
 
-.get-in-touch {
-  width: 20%;
-}
 footer {
   background-color: $primary-color-dark-grey;
   display: flex;
@@ -187,3 +337,4 @@ footer {
     margin-left: 2rem;
   }
 }
+
