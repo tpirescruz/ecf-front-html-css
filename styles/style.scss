@@ -297,12 +297,16 @@ form {
     height: 5rem;
     border: none;
     margin: 1rem 0;
+    padding: 2rem;
     background-color: $secondary-color-light-grey;
+    @extend %publicsansRegular;
   }
   textarea {
     background-color: $secondary-color-light-grey;
     border: none;
     margin: 1rem 0;
+    padding: 2rem;
+    @extend %publicsansRegular;
   }
   button {
     @extend %publicsansRegular;
@@ -316,6 +320,20 @@ form {
     }
   }
 }
+.required-field {
+  border: $secondary-color-red 2px solid;
+  &::after {
+    content: 'This field is required';
+    position: relative;
+    display: inline-block;
+    top: -100%;
+    font-size: 1rem;
+    color:$secondary-color-red;
+  }
+}
+
+
+
 .input-container {
   display: flex;
   flex-direction: column;

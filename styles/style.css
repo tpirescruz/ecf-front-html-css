@@ -5,7 +5,7 @@ h2, .header-intro {
   font-weight: 700;
 }
 
-.btn-primary, .btn-secondary, p, .top-nav, .nav p, form button, footer {
+.btn-primary, .btn-secondary, p, .top-nav, .nav p, form input, form textarea, form button, footer {
   font-family: "Public Sans", sans-serif;
   font-weight: 400;
 }
@@ -394,6 +394,7 @@ form input {
   height: 5rem;
   border: none;
   margin: 1rem 0;
+  padding: 2rem;
   background-color: #eaeaeb;
 }
 
@@ -401,6 +402,7 @@ form textarea {
   background-color: #eaeaeb;
   border: none;
   margin: 1rem 0;
+  padding: 2rem;
 }
 
 form button {
@@ -413,6 +415,19 @@ form button {
 
 form button:hover {
   background-color: #5fb4a2;
+}
+
+.required-field {
+  border: #f43030 2px solid;
+}
+
+.required-field::after {
+  content: 'This field is required';
+  position: relative;
+  display: inline-block;
+  top: -100%;
+  font-size: 1rem;
+  color: #f43030;
 }
 
 .input-container {
