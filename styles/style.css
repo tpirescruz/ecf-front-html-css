@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Karla:wght@400;700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 h2, .header-intro {
-  font-family: "Ibarra Real Nova", serif;
+  font-family: "Ibarra Real Nova", sans-serif;
   font-weight: 700;
 }
 
@@ -67,6 +67,10 @@ body {
   border: 1px solid #33323d;
   background-color: #33323d;
   color: #fafafa;
+}
+
+ul {
+  padding: 0;
 }
 
 h1 {
@@ -191,6 +195,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 5rem;
 }
 
 .main-contact h2 {
@@ -284,7 +289,7 @@ p {
   background-color: transparent;
   width: 50%;
   padding: 2rem 0;
-  border: 1px #33323d solid;
+  border: 1px grey solid;
 }
 
 .nav p {
@@ -377,8 +382,8 @@ p {
   width: 60%;
 }
 
-.get-in-touch .logo img {
-  margin: 2rem 5rem 0 0;
+.get-in-touch .logo {
+  margin: 0 5rem;
 }
 
 form {
@@ -434,7 +439,12 @@ footer {
   margin-top: 5rem;
 }
 
-footer div {
+footer nav {
+  padding: 2rem 10rem;
+  color: #fafafa;
+}
+
+.footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,9 +453,22 @@ footer div {
           align-items: center;
 }
 
-footer nav {
-  padding: 2rem 10rem;
-  color: #fafafa;
+.footer-nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer-nav-item {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 2rem;
+  font-size: 1.3rem;
 }
 
 .logo {
@@ -544,9 +567,37 @@ footer nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: auto;
+  }
+  .portfolio-item .side-text {
+    padding: 5rem 0;
   }
   .portfolio-item:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio-page-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+  }
+  .portfolio-page-right {
+    width: 100%;
+  }
+  .portfolio-page-left {
+    width: 100%;
+    margin: auto;
+  }
+  .nav-left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -573,11 +624,33 @@ footer nav {
             align-items: center;
     text-align: center;
   }
+  .footer-nav-item {
+    padding: 1.5rem 0;
+  }
   .footer-nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .contact-cont {
+    margin: 5%;
+  }
+  .get-in-touch {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  form {
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -617,6 +690,20 @@ footer nav {
     width: 70%;
     padding: 5%;
     margin: 0;
+  }
+  .portfolio-page-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+  }
+  .portfolio-page-right {
+    width: 100%;
+  }
+  .portfolio-page-left {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

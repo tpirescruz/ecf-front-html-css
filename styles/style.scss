@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Karla:wght@400;700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
 %novaRegular {
-  font-family: "Ibarra Real Nova", serif;
+  font-family: "Ibarra Real Nova", sans-serif;
   font-weight: 400;
 }
 %novaBold {
-  font-family: "Ibarra Real Nova", serif;
+  font-family: "Ibarra Real Nova", sans-serif;
   font-weight: 700;
 }
 %publicsansBoldItalic {
@@ -73,10 +73,12 @@ body {
     color: $secondary-color-very-light-grey;
   }
 }
-
+ul {
+  padding: 0;
+}
 h1 {
   color: $primary-color-dark-grey;
-  font-size: 4rem
+  font-size: 4rem;
 }
 h2 {
   @extend %novaBold;
@@ -163,6 +165,7 @@ p {
   justify-content: space-between;
   padding: 5rem 0;
   align-items: center;
+  margin: 0 5rem;
   h2 {
     width: 40%;
   }
@@ -226,7 +229,7 @@ p {
   background-color: transparent;
   width: 50%;
   padding: 2rem 0;
-  border: 1px $primary-color-dark-grey solid;
+  border: 1px grey solid;
   p {
     @extend %publicsansRegular;
     color: $primary-color-dark-grey;
@@ -260,6 +263,7 @@ p {
   text-align: right;
   border-right: none;
   display: flex;
+
   justify-content: flex-end;
   align-items: center;
 }
@@ -283,9 +287,7 @@ p {
     width: 60%;
   }
   .logo {
-    img {
-      margin: 2rem 5rem 0 0;
-    }
+    margin: 0 5rem;
   }
 }
 form {
@@ -326,14 +328,23 @@ footer {
   padding: 0 10rem;
   margin-top: 5rem;
   @extend %publicsansRegular;
-  div {
-    display: flex;
-    align-items: center;
-  }
   nav {
     padding: 2rem 10rem;
     color: $secondary-color-very-light-grey;
   }
+}
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+.footer-nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+.footer-nav-item {
+  width: fit-content;
+  padding: 0 2rem;
+  font-size: 1.3rem;
 }
 
 .logo {
@@ -343,13 +354,13 @@ footer {
   }
 }
 
-// Small devices 
+// Small devices
 @media screen and (min-width: 0px) and (max-width: 380px) {
   .top-nav {
     padding: 2rem 5%;
   }
-  
-  h1{
+
+  h1 {
     font-size: 4rem;
   }
   .nav-menu {
@@ -368,7 +379,7 @@ footer {
     height: 30rem;
     width: 100%;
   }
-  .main-index{
+  .main-index {
     margin: 5%;
   }
   .about-me {
@@ -377,7 +388,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 90%;
-    padding: 5rem 0 ;
+    padding: 5rem 0;
     margin: auto;
     margin-top: 30rem;
     img {
@@ -394,7 +405,7 @@ footer {
     margin: 0;
     flex-direction: column;
     align-items: center;
-    p{
+    p {
       margin: 2rem 0;
     }
   }
@@ -403,17 +414,35 @@ footer {
     h2 {
       width: 100%;
       text-align: center;
-      margin: 5rem 0 ;
+      margin: 5rem 0;
     }
   }
   .portfolio-item {
     flex-direction: column;
-    margin: auto;
+    .side-text {
+      padding: 5rem 0;
+    }
   }
   .portfolio-item:nth-child(even) {
     flex-direction: column;
   }
-
+  .portfolio-page-main {
+    flex-direction: column;
+    margin: auto;
+  }
+  .portfolio-page-right {
+    width: 100%;
+  }
+  .portfolio-page-left {
+    width: 100%;
+    margin: auto;
+  }
+  .nav-left {
+    flex-direction: column;
+  }
+  .nav-right {
+    flex-direction: column;
+  }
   footer {
     margin: 0;
     padding: 5rem 0;
@@ -425,14 +454,28 @@ footer {
     align-items: center;
     text-align: center;
   }
+  .footer-nav-item {
+    padding: 1.5rem 0;
+  }
   .footer-nav {
     flex-direction: column;
   }
+  .contact-cont {
+    margin: 5%;
+  }
+  .get-in-touch {
+    flex-direction: column;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+  form {
+    width: 90%;
+    margin: auto;
+  }
 }
 
-
-
-// Medium devices 
+// Medium devices
 @media screen and (min-width: 380px) and (max-width: 770px) {
   h1 {
     font-size: 3.9rem;
@@ -440,8 +483,11 @@ footer {
   h2 {
     font-size: 3rem;
   }
-  p {font-size: 1.6rem;}
-  .homepage-header{
+  p {
+    font-size: 1.6rem;
+  }
+
+  .homepage-header {
     width: 90%;
     background-position: center;
     background-size: cover;
@@ -453,7 +499,7 @@ footer {
     height: 50%;
     top: 50%;
   }
-  .main-index{
+  .main-index {
     margin: 5%;
   }
   .about-me {
@@ -467,5 +513,16 @@ footer {
     width: 70%;
     padding: 5%;
     margin: 0;
+  }
+  .portfolio-page-main {
+    flex-direction: column;
+    margin: auto;
+  }
+  .portfolio-page-right {
+    width: 100%;
+  }
+  .portfolio-page-left {
+    width: 100%;
+    margin: 0 auto;
   }
 }
