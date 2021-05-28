@@ -75,7 +75,7 @@ ul {
 
 h1 {
   color: #33323d;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h2 {
@@ -147,14 +147,13 @@ p {
           flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   width: 40%;
-  height: 50%;
+  height: 60%;
   font-size: 2.5rem;
   line-height: 5rem;
-  margin: auto auto 0 0;
   position: relative;
-  top: 50%;
+  bottom: -40%;
 }
 
 .header-intro h1 {
@@ -180,9 +179,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 15rem;
-  padding: 0 5rem;
-  width: 40%;
+  padding: 0 10rem;
+  margin: 0 5rem;
+  width: 50%;
   border-top: 1px solid;
   border-bottom: 1px solid;
   color: #eaeaeb;
@@ -318,7 +317,7 @@ p {
 }
 
 .nav-left::before {
-  content: url(ressources/Home/nav-arrow.svg);
+  content: url(../ressources/Home/nav-arrow.svg);
   display: block;
   position: relative;
   -webkit-transform: scale(1.2);
@@ -327,7 +326,7 @@ p {
 }
 
 .nav-right::after {
-  content: url(ressources/Home/nav-arrow.svg);
+  content: url(../ressources/Home/nav-arrow.svg);
   display: block;
   position: relative;
   -webkit-transform: rotate(180deg) scale(1.4);
@@ -481,9 +480,9 @@ footer nav {
 }
 
 .footer-nav-item {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   padding: 0 2rem;
   font-size: 1.3rem;
 }
@@ -541,7 +540,7 @@ footer nav {
     background-position: bottom;
   }
   .header-intro {
-    top: 100%;
+    bottom: -110%;
     margin: auto;
     padding: 0;
     height: 30rem;
@@ -698,11 +697,31 @@ footer nav {
     width: 90%;
     margin: auto;
   }
+  .nav p {
+    margin: 0;
+  }
+  .nav-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: right;
+  }
+  .nav-left::before {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin: auto;
+  }
+  .nav-right::after {
+    -webkit-transform: rotate(180deg) scale(1);
+            transform: rotate(180deg) scale(1);
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 380px) and (max-width: 770px) {
   h1 {
-    font-size: 3.9rem;
+    font-size: 4rem;
   }
   h2 {
     font-size: 3rem;
@@ -712,18 +731,21 @@ footer nav {
   }
   .homepage-header {
     width: 90%;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     height: 100vh;
-    background-image: url(ressources/Home/Bitmap-tablet.png);
+    background-image: url(../ressources/Home/Bitmap-tablet.png);
   }
   .header-intro {
     width: 70%;
-    height: 50%;
-    top: 50%;
+    height: 40%;
+    bottom: -60%;
   }
   .main-index {
     margin: 5%;
+  }
+  .about-me figure {
+    width: 40%;
   }
   .about-me img {
     height: 100%;
@@ -733,9 +755,8 @@ footer nav {
        object-position: right;
   }
   .side-text {
-    width: 70%;
     padding: 5%;
-    margin: 0;
+    margin: 0 5%;
   }
   .portfolio-page-main {
     -webkit-box-orient: vertical;
@@ -750,6 +771,9 @@ footer nav {
   .portfolio-page-left {
     width: 100%;
     margin: 0 auto;
+  }
+  footer {
+    padding: 0 5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
