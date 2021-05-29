@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Karla:wght@400;700&family=Public+Sans:ital,wght@0,400;0,700;1,700&display=swap");
 
+//used fonts
 %novaRegular {
 font-family: "Ibarra Real Nova", sans-serif;
   font-weight: 400;
@@ -25,16 +26,15 @@ font-family: "Ibarra Real Nova", sans-serif;
   font-family: "Karla", sans-serif;
   font-weight: 700;
 }
-
+// used colors 
 $primary-color-cyan: #5fb4a2;
 $primary-color-dark-blue: #203a4c;
 $primary-color-dark-grey: #33323d;
 $secondary-color-very-light-grey: #fafafa;
 $secondary-color-light-grey: #eaeaeb;
 $secondary-color-red: #f43030;
-body {
-  background-color: $secondary-color-very-light-grey;
-}
+
+//main button
 .btn-primary {
   background-color: $primary-color-dark-blue;
   color: $secondary-color-very-light-grey;
@@ -46,7 +46,7 @@ body {
   border: none;
   justify-content: center;
   &::before {
-    content: url(/ressources/Home/Group-3.svg);
+    content: url(../ressources/Home/Group-3.svg);
     position: relative;
     left: -3rem;
     background-color: #00000049;
@@ -59,7 +59,7 @@ body {
     color: $secondary-color-very-light-grey;
   }
 }
-
+//secondary button
 .btn-secondary {
   background-color: rgba(255, 255, 255, 0);
   padding: 1.5rem 3rem;
@@ -73,9 +73,13 @@ body {
     color: $secondary-color-very-light-grey;
   }
 }
+body {
+  background-color: $secondary-color-very-light-grey;
+}
 ul {
   padding: 0;
 }
+//titles and text sizes + text properties
 h1 {
   color: $primary-color-dark-grey;
   font-size: 5rem;
@@ -91,7 +95,6 @@ h3 {
   color: $primary-color-dark-grey;
   font-size: 3rem;
 }
-
 p {
   @extend %publicsansRegular;
   font-size: 1.5rem;
@@ -99,6 +102,7 @@ p {
   margin: 1.5rem 0;
   color: $primary-color-dark-grey;
 }
+// top nav
 .top-nav {
   @extend %publicsansRegular;
   display: flex;
@@ -118,17 +122,19 @@ p {
     color: $primary-color-cyan;
   }
 }
-
+//Section du header / hero
 .homepage-header {
   background-image: url(../ressources/Home/Bitmap.png);
+  background-image: image-set(
+    url(../ressources/Home/Bitmap@2x.png) 2x,
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 80%;
   margin: 0 auto;
-  height: 75vh;
+  height: 55rem;
 }
-
 .header-intro {
   background-color: $secondary-color-very-light-grey;
   display: flex;
@@ -145,6 +151,8 @@ p {
     margin: 2rem 0;
   }
 }
+
+//main index content
 .main-index {
   margin: 0 10rem;
 }
@@ -172,10 +180,7 @@ p {
     width: 40%;
   }
 }
-.portfolios-contact-banner {
-  margin: 0 10rem;
-}
-
+//portfolio list page
 .portfolio-item:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -190,15 +195,19 @@ p {
   width: fit-content;
   margin: auto;
 }
+
+//single portfolio pages 
 .portfolio-page-left {
   border-top: $secondary-color-light-grey 1px solid;
   border-bottom: $secondary-color-light-grey 1px solid;
+  display: flex;
+  flex-direction: column;
   width: 30%;
   height: fit-content;
   margin: 0 10rem;
   padding: 5rem 0;
   p {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 }
 .portfolio-page-right {
@@ -210,23 +219,26 @@ p {
     margin: 5rem 0;
   }
 }
+.portfolios-contact-banner {
+  margin: 0 10rem;
+}
 .green-text {
   color: $primary-color-cyan;
 }
-.portfolio-page-main:first-child {
-  border: 1px solid red;
-}
+
 .portfolio-page-main {
   display: flex;
   justify-content: space-between;
   width: 80%;
   margin: 10rem auto;
 }
+//navigation entre les page single du portfolio
 .portfolio-nav {
   display: flex;
   width: 80%;
   margin: auto;
 }
+
 .nav {
   background-color: transparent;
   width: 50%;
@@ -268,16 +280,12 @@ p {
   justify-content: flex-end;
   align-items: center;
 }
+
+//page de contact
 .contact-cont {
   display: flex;
   margin: 0 15rem;
   flex-direction: column;
-}
-.form-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 5rem 0;
-  border-top: $secondary-color-light-grey 1px solid;
 }
 .get-in-touch {
   display: flex;
@@ -287,6 +295,13 @@ p {
   div {
     width: 60%;
   }
+}
+//formulaire de la page de contact
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+  border-top: $secondary-color-light-grey 1px solid;
 }
 form {
   width: 60%;
@@ -336,6 +351,7 @@ form {
   margin: 2em 0;
 }
 
+//footer présent sur toute les pages 
 footer {
   background-color: $primary-color-dark-grey;
   display: flex;
@@ -361,8 +377,10 @@ footer {
   width: max-content;
   padding: 0 2rem;
   font-size: 1.3rem;
+  &:hover {
+    color: $primary-color-cyan;
+  }
 }
-
 .logo {
   display: flex;
   img {
@@ -370,13 +388,12 @@ footer {
   }
 }
 
-// Small devices
+// ================================-_ Responsive - modified for mobile screens _-================================
 @media screen and (min-width: 0px) and (max-width: 380px) {
   .top-nav {
     padding: 2rem 5%;
     
   }
-
   h1 {
     font-size: 4rem;
   }
@@ -534,7 +551,7 @@ footer {
 
 }
 
-// Medium devices
+// ================================-_ Responsive - modified for tablet screeens  _-=====================================
 @media screen and (min-width: 380px) and (max-width: 770px) {
   h1 {
     font-size: 4rem;
@@ -545,13 +562,15 @@ footer {
   p {
     font-size: 1.6rem;
   }
-
   .homepage-header {
     width: 90%;
     background-position: top;
     background-size: cover;
-    height: 100vh;
+    height: 60rem;
     background-image: url(../ressources/Home/Bitmap-tablet.png);
+    background-image: image-set(
+    url(../ressources/Home/Bitmap-tablet@2x.png) 2x,
+  );
   }
   .header-intro {
     width: 70%;
@@ -579,18 +598,31 @@ footer {
     flex-direction: column;
     margin: auto;
   }
+  .tablet-trick {
+    width: 40%;
+    order: 5;
+  }
   .portfolio-page-right {
     width: 100%;
   }
   .portfolio-page-left {
     width: 100%;
+    flex-wrap: wrap;
+    height: 35rem;
     margin: 0 auto;
   }
-
- 
-
   footer {
     padding: 0 5rem;
+    nav {
+      padding-left: 0;
+      padding-right: 0; 
+    }
+  }
+
+  .nav {
+    p {
+      margin: 0;
+    }
   }
   
 }

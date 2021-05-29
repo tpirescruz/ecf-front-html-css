@@ -146,6 +146,7 @@ a[href^="tel"] {
   }
 }
 
+/* J'ajoute toujours de quoi neutraliser le style des lies dans la base*/
 a{
   color: inherit;
   text-decoration: inherit;
