@@ -35,6 +35,7 @@ form {
 .btn-primary::before {
   content: url(../ressources/Home/Group-3.svg);
   position: relative;
+  text-align: center;
   left: -3rem;
   background-color: #00000049;
   display: inline-block;
@@ -56,6 +57,7 @@ form {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  color: #33323d;
   border: 1px solid #33323d;
 }
 
@@ -304,6 +306,7 @@ p {
   color: #33323d;
   -webkit-filter: opacity(50%);
           filter: opacity(50%);
+  margin: 0;
 }
 
 .nav-left {
@@ -759,8 +762,27 @@ footer nav {
     padding-left: 0;
     padding-right: 0;
   }
-  .nav p {
-    margin: 0;
+  .contact-cont {
+    margin: 0 5%;
+  }
+  .get-in-touch {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .get-in-touch div {
+    width: 90%;
+  }
+  .form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  form {
+    width: 90%;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -33,7 +33,6 @@ $primary-color-dark-grey: #33323d;
 $secondary-color-very-light-grey: #fafafa;
 $secondary-color-light-grey: #eaeaeb;
 $secondary-color-red: #f43030;
-
 //main button
 .btn-primary {
   background-color: $primary-color-dark-blue;
@@ -48,6 +47,7 @@ $secondary-color-red: #f43030;
   &::before {
     content: url(../ressources/Home/Group-3.svg);
     position: relative;
+    text-align: center;
     left: -3rem;
     background-color: #00000049;
     display: inline-block;
@@ -65,6 +65,7 @@ $secondary-color-red: #f43030;
   padding: 1.5rem 3rem;
   width: max-content;
   height: max-content;
+  color: $primary-color-dark-grey;
   border: 1px solid $primary-color-dark-grey;
   @extend %publicsansRegular;
   &:hover {
@@ -152,7 +153,6 @@ p {
     margin: 2rem 0;
   }
 }
-
 //main index content
 .main-index {
   margin: 0 10rem;
@@ -195,7 +195,6 @@ p {
   width: fit-content;
   margin: auto;
 }
-
 //single portfolio pages 
 .portfolio-page-left {
   border-top: $secondary-color-light-grey 1px solid;
@@ -225,7 +224,6 @@ p {
 .green-text {
   color: $primary-color-cyan;
 }
-
 .portfolio-page-main {
   display: flex;
   justify-content: space-between;
@@ -238,7 +236,6 @@ p {
   width: 80%;
   margin: auto;
 }
-
 .nav {
   background-color: transparent;
   width: 50%;
@@ -248,6 +245,7 @@ p {
     @extend %publicsansRegular;
     color: $primary-color-dark-grey;
     filter: opacity(50%);
+    margin: 0;
   }
 }
 .nav-left {
@@ -384,12 +382,10 @@ footer {
     margin: 0 2rem;
   }
 }
-
 // ================================-_ Responsive - modified for mobile screens _-================================
 @media screen and (min-width: 0px) and (max-width: 380px) {
   .top-nav {
-    padding: 2rem 5%;
-    
+    padding: 2rem 5%; 
   }
   h1 {
     font-size: 4rem;
@@ -527,9 +523,7 @@ footer {
     transform: rotate(180deg) scale(1);
     margin-bottom: 1rem;
   }
-
 }
-
 // ================================-_ Responsive - modified for tablet screeens  _-=====================================
 @media screen and (min-width: 380px) and (max-width: 770px) {
   h1 {
@@ -538,7 +532,6 @@ footer {
   h2 {
     font-size: 3rem;
   }
-  
   .homepage-header {
     width: 90%;
     height: 60rem;
@@ -593,11 +586,22 @@ footer {
       padding-right: 0; 
     }
   }
-  .nav {
-    p {
-      margin: 0;
+  .contact-cont{
+    margin: 0 5%;
+  }
+  .get-in-touch {
+    flex-direction: column;
+    div {
+      width: 90%;
     }
   }
-  
+  .form-container {
+    flex-direction: column;
+  }
+  form {
+    width: 90%;
+    margin: auto;
+  }
+
 }
 
