@@ -69,7 +69,8 @@ body {
   background-color: #fafafa;
 }
 
-ul {
+ul,
+li {
   padding: 0;
 }
 
@@ -182,7 +183,6 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 10rem;
-  margin: 0 5rem;
   width: 50%;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -543,14 +543,11 @@ footer nav {
     height: 2px;
   }
   .homepage-header {
-    padding: 0;
     margin: auto;
     height: 30rem;
-    background-position: bottom;
   }
   .header-intro {
     bottom: -110%;
-    margin: auto;
     padding: 0;
     height: 30rem;
     width: 100%;
@@ -559,9 +556,6 @@ footer nav {
     margin: 5%;
   }
   .about-me {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -569,9 +563,6 @@ footer nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 90%;
     padding: 5rem 0;
     margin: auto;
@@ -586,21 +577,7 @@ footer nav {
   }
   .side-text {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     padding: 0;
-    margin: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .side-text p {
-    margin: 2rem 0;
   }
   .main-contact {
     -webkit-box-orient: vertical;
@@ -642,13 +619,7 @@ footer nav {
     width: 100%;
     margin: auto;
   }
-  .nav-left {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .nav-right {
+  .nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -663,9 +634,6 @@ footer nav {
             flex-direction: column;
   }
   .footer-nav-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -673,7 +641,6 @@ footer nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
   }
   .footer-nav-item {
     padding: 1.5rem 0;
@@ -717,8 +684,6 @@ footer nav {
     text-align: right;
   }
   .nav-left::before {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     margin: auto;
   }
   .nav-right::after {
@@ -735,13 +700,8 @@ footer nav {
   h2 {
     font-size: 3rem;
   }
-  p {
-    font-size: 1.6rem;
-  }
   .homepage-header {
     width: 90%;
-    background-position: top;
-    background-size: cover;
     height: 60rem;
     background-image: url(../ressources/Home/Bitmap-tablet.png);
     background-image: -webkit-image-set(url(../ressources/Home/Bitmap-tablet@2x.png) 2x);
