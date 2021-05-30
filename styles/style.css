@@ -136,7 +136,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   height: 55rem;
 }
@@ -184,6 +184,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 0 10rem;
   width: 50%;
   border-top: 1px solid;
