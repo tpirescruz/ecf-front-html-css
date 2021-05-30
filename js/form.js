@@ -23,5 +23,7 @@ if (textArea.value.length == 0) {
     textArea.classList.add('required-border')
 } else {
     textArea.classList.remove('required-border')
+    textArea.parentNode.removeChild(warning)
+
 }
 })
