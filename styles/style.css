@@ -403,7 +403,7 @@ form {
 form input {
   height: 5rem;
   border: none;
-  margin: 1rem 0;
+  margin-top: 1rem;
   padding: 2rem;
   background-color: #eaeaeb;
 }
@@ -411,7 +411,7 @@ form input {
 form textarea {
   background-color: #eaeaeb;
   border: none;
-  margin: 1rem 0;
+  margin-top: 1rem;
   padding: 2rem;
 }
 
@@ -427,17 +427,14 @@ form button:hover {
   background-color: #5fb4a2;
 }
 
-.required-field {
-  border: #f43030 2px solid;
+.required {
+  font-size: 1.5rem;
+  color: #f43030;
+  margin: 0;
 }
 
-.required-field::after {
-  content: 'This field is required';
-  position: relative;
-  display: inline-block;
-  top: -100%;
-  font-size: 1rem;
-  color: #f43030;
+.required-border {
+  border: 2px solid #f43030;
 }
 
 .input-container {

@@ -307,7 +307,7 @@ form {
   input {
     height: 5rem;
     border: none;
-    margin: 1rem 0;
+    margin-top: 1rem;
     padding: 2rem;
     background-color: $secondary-color-light-grey;
     @extend %publicsansRegular;
@@ -315,7 +315,7 @@ form {
   textarea {
     background-color: $secondary-color-light-grey;
     border: none;
-    margin: 1rem 0;
+    margin-top: 1rem;
     padding: 2rem;
     @extend %publicsansRegular;
   }
@@ -331,16 +331,13 @@ form {
     }
   }
 }
-.required-field {
-  border: $secondary-color-red 2px solid;
-  &::after {
-    content: 'This field is required';
-    position: relative;
-    display: inline-block;
-    top: -100%;
-    font-size: 1rem;
-    color:$secondary-color-red;
-  }
+.required {
+  font-size: 1.5rem;
+  color:$secondary-color-red;
+  margin: 0;
+}
+.required-border {
+  border: 2px solid $secondary-color-red;
 }
 .input-container {
   display: flex;
